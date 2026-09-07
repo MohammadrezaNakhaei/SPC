@@ -1,0 +1,38 @@
+name: spc
+channels:
+  - nvidia
+  - pytorch
+  - conda-forge
+  - anaconda
+  - menpo
+dependencies:
+  - python=3.10 # requried for meta-world 3
+  - pytorch=2.6
+  - torchvision
+  - av 
+  - tensorboard
+  - wandb
+  - hydra-core=1.3
+  - hydra-colorlog=1.2
+  - imageio  # For VideoRecorder
+  - imageio-ffmpeg # needed for rendering
+  - ffmpeg # needed for rendering
+  - moviepy 
+  # For mujoco
+  - glew
+  - mesalib
+  - glfw3
+  - seaborn
+  - matplotlib
+  - pip
+  - pip:
+      - numpy==1.26.4
+      - termcolor
+      - jaxtyping  # Types with shapes for tensors
+      - tensordict-nightly
+      - vector_quantize_pytorch # This installs PyTorch (needs >2.0)
+      - git+https://github.com/Farama-Foundation/Metaworld.git@master#egg=metaworld==3.0.0
+      - dm_control==1.0.31  
+      - mujoco==3.3.5
+      - h5py 
+      - scikit-learn==1.7

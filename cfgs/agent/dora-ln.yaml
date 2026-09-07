@@ -1,0 +1,13 @@
+defaults:
+  - common
+  - _self_
+  
+name: DORA-LN
+use_layernorm: True
+use_information_bottleneck: False
+backward_z: False
+use_focal: False
+use_infonce: True
+use_l2_reg: True
+use_club: False
+use_decoder: False 

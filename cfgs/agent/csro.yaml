@@ -1,0 +1,10 @@
+defaults:
+  - common
+  - _self_
+
+name: CSRO
+use_information_bottleneck: False
+backward_z: False
+use_focal: True
+use_club: True
+use_decoder: False 

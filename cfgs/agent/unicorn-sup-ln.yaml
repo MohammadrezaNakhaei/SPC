@@ -1,0 +1,11 @@
+defaults:
+  - common
+  - _self_
+
+name: UNICORN-SUP-LN
+use_layernorm: True
+use_information_bottleneck: False
+backward_z: False
+use_focal: False
+use_club: False
+use_decoder: True 

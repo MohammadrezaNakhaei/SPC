@@ -1,0 +1,11 @@
+defaults:
+  - common
+  - _self_
+  
+name: UNICORN-SS
+use_information_bottleneck: False
+backward_z: False
+use_focal: True
+use_club: False
+use_decoder: True 
+

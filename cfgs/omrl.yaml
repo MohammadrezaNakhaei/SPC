@@ -1,0 +1,40 @@
+defaults:
+  - _self_
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled  
+# env
+env_name: cheetah-vel
+max_episode_steps: 200
+num_tasks: 40
+dataset_size: 200000
+# train
+seed: 0
+epochs: 100
+iter_per_epoch: 5000
+batch_size: 64
+context_batch_size: 64
+device: 'cuda:0'
+meta_batch_size: 16
+save_every: 10 # save every epoch
+seq_len: 5 # for rnn encoder
+
+# eval: env specific
+num_eval_episodes: 3
+num_context: 600
+random_init_z: True 
+random_np_steps: 100 
+resample_every: ${max_episode_steps}  
+# logging
+use_wandb: true
+project_name: SPC
+group: ${env_name}-${agent.name}
+run_name: ${env_name}-${agent.name}-${seed}-${now:%Y-%m-%d_%H-%M-%S}
+log_dir: ./logs/${env_name}/${agent.name}/seed${seed}
+log_all: True
+save_video: False
+# hydra configuration    
+hydra:  
+  output_subdir: null  
+  run:  
+    dir: .
+  
